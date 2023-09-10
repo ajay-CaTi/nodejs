@@ -1,15 +1,19 @@
 // const lib = require("./lib.js");
 const fs = require("fs");
 
-// fs.writeFileSync("demo.txt", "SOme one is in school");
+fs.writeFileSync("bioo.txt", "some test here");
 
-// fs.appendFileSync("demo.txt", "He ye awesome");
-
-const data = fs.readFileSync("demo.txt", "utf-8");
-
-fs.renameSync("demo.txt", "demodemo.txt");
+const data = fs.readFileSync("bioo.txt", "utf-8");
 
 console.log(data);
+
+fs.appendFileSync("bioo.txt", "more data here");
+
+fs.renameSync("./bioo.txt", "./bio.txt");
+
+fs.unlinkSync("./bio.txt");
+
+// Above is CRUD
 
 // this is synchronous, & to write a file it needs some time
 // inbetween this time our server is not blocked, so make it asynchronous

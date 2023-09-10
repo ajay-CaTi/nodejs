@@ -8,6 +8,16 @@ console.log(text);
 // this is synchronous, & to read a file it needs some time
 // inbetween this time our server is not blocked so make it asynchronous
 
+# Remove Directory
+
+rmdir dir
+
+# Add folder/directory
+
+mkdir dir
+
+#
+
 git init
 git add README.md
 git commit -m "first commit"
