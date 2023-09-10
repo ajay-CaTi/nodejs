@@ -1,6 +1,8 @@
 // const lib = require("./lib.js");
 const fs = require("fs");
 
+fs.mkdirSync("dir");
+
 fs.writeFileSync("bioo.txt", "some test here");
 
 const data = fs.readFileSync("bioo.txt", "utf-8");
