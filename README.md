@@ -1,5 +1,13 @@
 # Node
 
+# Synchronous module
+
+const text = fs.readFileSync("demo.txt", "utf-8");
+console.log(text);
+
+// this is synchronous, & to read a file it needs some time
+// inbetween this time our server is not blocked so make it asynchronous
+
 git init
 git add README.md
 git commit -m "first commit"
