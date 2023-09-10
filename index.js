@@ -1,21 +1,29 @@
 // const lib = require("./lib.js");
 const fs = require("fs");
 
-fs.mkdirSync("dir");
+// fs.mkdirSync("dir");
 
-fs.writeFileSync("bioo.txt", "some test here");
+fs.writeFile("bio.txt", "some text here", (err, data) => {
+  console.log(err, data);
+});
 
-const data = fs.readFileSync("bioo.txt", "utf-8");
+fs.appendFile("bio.txt", "another text", (err) => {
+  console.log(err || "Data is appended in file");
+});
 
-console.log(data);
+fs.readFile("bio.txt", "utf-8", (err, data) => {
+  console.log(data);
+});
 
-fs.appendFileSync("bioo.txt", "more data here");
+fs.appendFile("bio.txt", "Next data", (err) => {
+  console.log("added data");
+});
 
-fs.renameSync("./bioo.txt", "./bio.txt");
+fs.rename("bio.txt", "bio.txt", () => {
+  console.log("rename done");
+});
 
-fs.unlinkSync("./bio.txt");
-
-// Above is CRUD
+// fs.unlinkSync("./bio.txt");
 
 // this is synchronous, & to write a file it needs some time
 // inbetween this time our server is not blocked, so make it asynchronous
