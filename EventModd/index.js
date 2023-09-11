@@ -16,8 +16,9 @@ event.on("sayMyName", () => {
   console.log("Name:- Kumar");
 });
 
-event.on("sayMyName", () => {
-  console.log("Name:- Singh");
+event.on("checkPage", (sc, msg) => {
+  console.log(`This is checkpage ${sc} ${msg}`);
 });
 
-event.emit("sayMyName");
+event.emit("sayMyName", 200, "ok");
+event.emit("checkPage", 200, "ok");
